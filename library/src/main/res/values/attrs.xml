@@ -2,6 +2,14 @@
 <resources>
     <attr name="NoNameProgressBarStyle" format="reference" />
     <declare-styleable name="NoNameProgressBar">
-
+        <attr name="progressColor" format="color" />
+        <attr name="completeColor" format="color" />
+        <attr name="failedColor" format="color" />
+        <attr name="defaultColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="inProgressMess" format="string" />
+        <attr name="completeMess" format="string" />
+        <attr name="failedMess" format="string" />
+        <attr name="pausedMess" format="string" />
     </declare-styleable>
 </resources>
