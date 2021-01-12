@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Design.ProgressBar" parent="android:Widget"/>
+    <!--Base Style-->
+    <style name="Widget.NoNameLib.ProgressBar" parent="Widget.Design.ProgressBar">
+        <item name="progressColor">@color/progressColor</item>
+        <item name="failedColor">@color/failedColor</item>
+        <item name="completedColor">@color/completedColor</item>
+        <item name="defaultColor">@color/defaultColor</item>
+    </style>
+</resources>

@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e5edf7"
     tools:context=".MainActivity">
 
     <com.doctorblue.library.NoNameProgressBar
         android:layout_width="256dp"
         android:layout_height="64dp"
+        app:cardBackgroundColor="#e5edf7"
+        style="@style/Widget.NoNameLib.ProgressBar"
         android:id="@+id/progress_bar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

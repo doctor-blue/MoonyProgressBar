@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="completedColor">#61B15A</color>
+    <color name="failedColor">#EC524B</color>
+    <color name="defaultColor">#EBEBEB</color>
+    <color name="progressColor">#F5A25D</color>
+</resources>

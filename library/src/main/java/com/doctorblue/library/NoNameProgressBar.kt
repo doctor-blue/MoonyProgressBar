@@ -26,7 +26,7 @@ class NoNameProgressBar @JvmOverloads constructor(
     private var _currentProgress: Float = 0f
         set(value) {
             field = value
-            if (value == 100f)
+            if (value >= 100f)
                 _currentState = ProgressState.COMPLETED
         }
 
@@ -139,7 +139,7 @@ class NoNameProgressBar @JvmOverloads constructor(
                 typedArray.getColor(R.styleable.NoNameProgressBar_progressColor, progressColor)
 
             completedColor =
-                typedArray.getColor(R.styleable.NoNameProgressBar_completeColor, completedColor)
+                typedArray.getColor(R.styleable.NoNameProgressBar_completedColor, completedColor)
 
             failedColor =
                 typedArray.getColor(R.styleable.NoNameProgressBar_failedColor, failedColor)
@@ -155,7 +155,7 @@ class NoNameProgressBar @JvmOverloads constructor(
             failedMessage = typedArray.getString(R.styleable.NoNameProgressBar_failedMess)
                 ?: failedMessage
 
-            completedMessage = typedArray.getString(R.styleable.NoNameProgressBar_failedMess)
+            completedMessage = typedArray.getString(R.styleable.NoNameProgressBar_completedMess)
                 ?: completedMessage
 
             pausedMessage = typedArray.getString(R.styleable.NoNameProgressBar_pausedMess)
@@ -173,9 +173,7 @@ class NoNameProgressBar @JvmOverloads constructor(
         _currentState = state
         _currentProgress = progress
         if (state == ProgressState.IN_PROGRESS) {
-            animateAlpha(125, 255).doOnEnd {
-                animateAlpha(255, 125)
-            }
+            animateAlpha(125, 255)
         }
         invalidate()
     }
@@ -214,6 +212,7 @@ class NoNameProgressBar @JvmOverloads constructor(
             ProgressState.COMPLETED -> {
                 paintText.color = completedColor
                 paintProgress.color = completedColor
+                textAlpha = 255
                 completedMessage
             }
             else -> {
@@ -243,6 +242,7 @@ class NoNameProgressBar @JvmOverloads constructor(
             paintText,
             canvas
         )
+        val a = 0
 
     }
 
