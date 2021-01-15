@@ -25,8 +25,10 @@ class NoNameProgressBar @JvmOverloads constructor(
     private var _currentProgress: Float = 0f
         set(value) {
             field = value
-            if (value >= 100f)
+            if (value >= 100f){
                 _currentState = ProgressState.COMPLETED
+                field = 100f
+            }
         }
 
     private var _currentState = ProgressState.PREPARE
@@ -169,7 +171,7 @@ class NoNameProgressBar @JvmOverloads constructor(
         _currentState = state
         _currentProgress = progress
         if (state == ProgressState.IN_PROGRESS) {
-            animateAlpha(125, 255)
+            animateAlpha(175, 255)
         }
         invalidate()
     }
