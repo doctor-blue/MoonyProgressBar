@@ -11,7 +11,6 @@ import android.util.AttributeSet
 import androidx.annotation.ColorInt
 import androidx.annotation.Dimension
 import androidx.cardview.widget.CardView
-import androidx.core.animation.doOnEnd
 
 /**
  * Create by Nguyen Van Tan (Doctor-blue) 5/1/2021
@@ -99,19 +98,16 @@ class NoNameProgressBar @JvmOverloads constructor(
     private val paintProgress = Paint().apply {
         isAntiAlias = true
         style = Paint.Style.FILL
-        color = Color.YELLOW
     }
 
     private val ptProgressNormal = Paint().apply {
         isAntiAlias = true
         style = Paint.Style.FILL
-        color = Color.GRAY
     }
 
     private val paintText = Paint().apply {
         isAntiAlias = true
         style = Paint.Style.FILL
-        color = Color.WHITE
         textSize = this@NoNameProgressBar.textSize
     }
 
@@ -242,13 +238,12 @@ class NoNameProgressBar @JvmOverloads constructor(
             paintText,
             canvas
         )
-        val a = 0
 
     }
 
     private fun drawTextCentered(text: String, x: Float, y: Float, paint: Paint, canvas: Canvas) {
         val xPos = x - (paint.measureText(text) / 2).toInt()
-        val yPos = (y - (paintText.descent() + paintText.ascent()) / 2)
-        canvas.drawText(text, xPos, yPos, paintText)
+        val yPos = (y - (paint.descent() + paint.ascent()) / 2)
+        canvas.drawText(text, xPos, yPos, paint)
     }
 }
