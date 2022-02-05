@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="NoNameProgressBarStyle" format="reference" />
-    <declare-styleable name="NoNameProgressBar">
+    <attr name="MoonyProgressBarStyle" format="reference" />
+    <declare-styleable name="MoonyProgressBar">
         <attr name="progressColor" format="color" />
         <attr name="completedColor" format="color" />
         <attr name="failedColor" format="color" />

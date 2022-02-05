@@ -7,17 +7,18 @@
     android:background="#e5edf7"
     tools:context=".MainActivity">
 
-    <com.doctorblue.library.NoNameProgressBar
+    <com.devcomentry.progressbarlibrary.MoonyProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.MoonyLib.ProgressBar.CustomStyleName"
         android:layout_width="256dp"
         android:layout_height="64dp"
-        app:cardBackgroundColor="#e5edf7"
-        style="@style/Widget.NoNameLib.ProgressBar.CustomStyleName"
-        android:id="@+id/progress_bar"
         android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="#e5edf7"
+        app:cardElevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:focusable="true" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
