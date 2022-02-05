@@ -54,6 +54,20 @@ dependencies {
         <item name="textSize">14sp</item>
     </style>
 ```
+## Update progress
+```kotlin
+    progressBar.setState(ProgressState.IN_PROGRESS, i.toFloat())
+```
+- State
+```kotlin
+enum class ProgressState {
+    IN_PROGRESS,
+    COMPLETED,
+    FAILED,
+    PAUSED,
+    PREPARE,
+}
+```
 
 
 ## Donate
